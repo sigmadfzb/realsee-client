@@ -4,7 +4,6 @@ function useWindowDimensions() {
   const width = ref<number>(window.innerWidth);
   const height = ref<number>(window.innerHeight);
 
-  const winRatio = ref<number>(window.innerWidth / window.innerHeight);
   const isMobile = ref<boolean>(window.innerWidth / window.innerHeight ? false : true)
 
   const listener = () => {
