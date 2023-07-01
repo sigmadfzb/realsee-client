@@ -4,12 +4,12 @@ function useWindowDimensions() {
   const width = ref<number>(window.innerWidth);
   const height = ref<number>(window.innerHeight);
 
-  const isMobile = ref<boolean>(window.innerWidth / window.innerHeight ? false : true)
+  const isMobile = ref<boolean>(window.innerWidth / window.innerHeight > 1 ? false : true)
 
   const listener = () => {
     width.value = window.innerWidth;
     height.value = window.innerHeight;
-    isMobile.value = window.innerWidth / window.innerHeight ? false : true
+    isMobile.value = window.innerWidth / window.innerHeight > 1 ? false : true
   };
 
   window.addEventListener("resize", listener, false);
